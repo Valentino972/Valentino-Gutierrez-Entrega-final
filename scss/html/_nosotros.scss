@@ -1,0 +1,57 @@
+@import "../utilidades/variables";
+@import "../utilidades/extend";
+@import "../utilidades/mixin";
+
+/* Estilos pag Nosotros */
+/* flex */
+.contenedor-flex-2{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    .contenedor-grid-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        @include size(600px, 50%);
+        background-color: rgba(206, 222, 218, 0.462);
+        padding: 20px 20px;
+        margin-left: 30px;
+        border-radius: 6%;
+        margin-bottom: 20px;
+        box-shadow: 0px 0px 20px 14px rgb(63, 88, 58);
+        .imagen-br-2{
+            height: 130px;
+            width: 130px;
+            background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+            background-size:cover ;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+        .texto-1b{
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #000000;
+            font-weight: 600;
+        }
+        .texto-2b{
+            margin-top: 4rem;
+            text-align: center;
+            color: #000000;
+            font-weight: 300;
+            padding: 2rem;
+            p{
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+  /* bootstrap */
+.contenedor-bootstrap{
+    @extend %grid;
+    gap: 20px;
+    align-content: space-between;
+    margin-left: 80px;
+}

@@ -1,0 +1,325 @@
+//import
+@import "html/index";
+@import "html/nosotros";
+@import "html/productos";
+@import "html/contacto";
+@import "html/encontranos";
+
+
+
+
+/* Media celular */
+@media screen and (max-width:768px) {
+    #mainheader {
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        .logo {
+            margin: 0 auto;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            padding: 15px 20px; 
+        }
+        nav{
+            display: flex;
+            li {
+                font-size: 0.6rem;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                color: $color-nav-a;
+                &:hover {
+                    color: $color-nav-hover;
+                }
+            }
+        }
+    }  
+    .img-bk{
+        margin-top: 10px;
+        height: 10rem;
+        width: 100%;
+        margin-left: -1px;
+    }
+    .img-bk h1{
+        font-size: 2rem;
+    }
+    .container-1 {
+        width: 100%;
+    }
+    body {
+        width: 100%;
+    }
+    .contenedor-2 {
+        width: 100%;
+    }
+    
+    .contenedor-grid {
+        margin-top: 25px;
+        width: 100%;
+        background-color:rgb(242, 242, 242) ;
+        border-bottom: 1px solid rgb(64, 64, 64);
+        .grid-1{
+            margin-top: -40px;
+            .imagen-br{
+                height: 130px;
+                width: 130px;
+                margin-bottom: -30px;
+            }
+            .texto-1 {
+                font-size: 1.3rem;
+            }
+        }
+        .grid-2{
+            margin-top: -200px;
+            .texto-2{ 
+                p{
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .text-green{
+        font-size: 1.2rem;
+    }
+    .texto-white{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .texto-boton{
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-txt{
+        font-size: 0.8rem;
+        
+    }
+    /* Estilos pag Nosotros */
+    .contenedor-flex-2{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 10px;
+        .contenedor-grid-2 {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            width: 100%;
+            background-color: rgba(206, 222, 218, 0.462);
+            margin-left: 0px;
+        }
+        .imagen-br-2{
+            height: 80px;
+            width: 80px;
+            background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+            background-size:cover ;
+            border-radius: 50%;
+            margin: 0 auto;
+            margin-top: 3rem;
+        }
+        .texto-1b{
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            color: #000000;
+            font-weight: 600;
+        }
+        .texto-2b{
+            p{
+                margin-top: -6rem;
+                text-align: center;
+                font-size: 1.2rem;
+                color: #000000;
+                font-weight: 400;
+                padding: 2rem;
+            }
+        }
+    }
+    /*Bootstrap*/
+    .contenedor-bootstrap{
+        display: none;
+    }
+    
+    /* page productos */
+    /* bootstrap flex */
+    .title{
+        margin: 10px;
+        h1{
+            font-size: 1rem;
+            color: rgb(25, 170, 25);
+            border: 1px solid rgb(59, 59, 59);
+            margin-bottom: 5px;
+        }
+    }
+    .padre-prod{
+        .container-productos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+    }
+    /* Page contacto */
+    .texto-contacto{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 400;
+        background-color: rgb(245, 244, 244);
+        height: 80px;
+        padding: 18px;
+    }    
+    .container-form{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        .form-info{
+            width: 100%;
+            margin-left: 0px;
+            margin-top: 50px ;
+        }
+        .contenido{
+            font-weight: 300;
+            color: #509f32;
+            font-size: 2.2em;
+            
+        }
+        .section-redes{
+            margin-bottom: 40px;
+        }
+        .flex-static{
+            display: flex;
+            font-size: 35px;
+            gap: 20px;
+        }
+        .h2-contact{
+            width: 100%;
+        }
+        .redes{
+            margin: auto;    
+        }
+    }  
+    //page encontranos
+    .contenedor-flex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width:980px){
+    #mainheader {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        min-width: 60px;
+        margin: 0 auto;
+        .logo {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: black;
+        }
+
+    }
+    .grid-2{
+        .texto-2{
+            text-align: center;
+            color: #2e2e2e;
+            font-weight: 400;
+            }
+            p{
+                font-size: 1.2rem;
+            }
+    }
+    // page nosotros
+    .contenedor-flex-2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }    
+    .contenedor-grid-2 {
+        margin-top: 30px;
+        background-color: rgba(206, 222, 218, 0.462);
+        padding: 20px 20px;
+        margin: 15px;
+        border-radius: 6%;
+        box-shadow: 0px 0px 20px 14px rgb(63, 88, 58);
+        
+    }
+    .imagen-br-2{
+        height: 90px;
+        width: 90px;
+    }
+    .texto-1b{
+        text-align: center;
+        margin-top: 0rem;
+        font-size: 1.3rem;
+        color: #000000;
+        font-weight: 600;
+    }
+    .texto-2b{
+        
+        text-align: center;
+        color: #000000;
+        font-weight: 300;
+        padding: 2rem;
+        p{
+            font-size: 1rem;
+        }
+    }
+    /* bootstrap */
+    .contenedor-bootstrap{
+        align-items: center;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Page Productos*/
+    .padre-prod{
+        .container-productos{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+    }
+
+
+    /* Page contacto */
+    .texto-contacto{
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 400;
+        background-color: rgb(245, 244, 244);
+        height: 80px;
+        padding: 18px;
+    }    
+    .container-form{
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        .form-info{
+            width: 100%;
+            margin: auto;
+            margin-top: 50px ;
+        }
+        .contenido{
+            font-weight: 300;
+            color: #509f32;
+            width: 100%;
+            font-size: 2.2em;
+            
+        }
+        .section-redes{
+            margin-bottom: 40px;
+        }
+        .flex-static{
+            display: flex;
+            font-size: 35px;
+            margin: 20px 10px;
+            gap: 20px;
+        }
+    }
+    .redes{
+        margin: auto;
+    }
+}

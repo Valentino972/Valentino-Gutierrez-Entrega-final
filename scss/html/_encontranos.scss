@@ -1,0 +1,29 @@
+@import "../utilidades/variables";
+@import "../utilidades/mixin";
+
+
+
+/* Estilos pag encontranos */
+.tienda{
+    width: 100%;
+    padding: 10px 40px;
+    margin: 0 auto;
+    @include flex-2;
+    border-bottom: 2px dashed #000;
+    margin-bottom: 20px;
+}
+
+//section productos destacados
+.contenedor-txt{
+    .text-green{
+        text-align: center;
+        color: rgb(49, 124, 49);
+    }
+}
+
+.contenedor-flex{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    align-self: center;
+}

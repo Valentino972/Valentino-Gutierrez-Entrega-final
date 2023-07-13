@@ -1,0 +1,821 @@
+/*comentario en sass y css*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+/*Reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Estilos generales*/
+body {
+  font-family: source Sans pro , sans-serif;
+  background-color: #fffdfd; }
+
+#mainheader {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  min-width: 700px;
+  margin: 0 auto; }
+  #mainheader .logo {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: black;
+    padding: 25px 30px; }
+  #mainheader nav ul {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+    margin-top: 1rem; }
+  #mainheader nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 2px;
+    font-size: 0.8rem;
+    font-weight: 700; }
+  #mainheader nav a {
+    text-decoration: none;
+    color: #28b628; }
+    #mainheader nav a:hover {
+      color: #094f09; }
+
+.container-1 {
+  margin: 0 auto; }
+
+.img-bk {
+  height: 300px;
+  padding: 0 0;
+  background-image: url(../img/fondo-verde.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.txt-cont {
+  margin: 50px 20px; }
+
+.title {
+  margin-top: 20px; }
+
+.img-bk h1 {
+  font-size: 3rem;
+  color: #fdfdfd;
+  background-color: #2d2b2bcb;
+  border-radius: 4%;
+  padding: 10px; }
+
+.tit-2 {
+  display: flex; }
+
+.resaltar {
+  background-color: #fafafa;
+  opacity: 0.3;
+  color: black;
+  margin-left: 25px; }
+
+/*Footers*/
+aside {
+  background-image: url(../img/bram-naus-hgoIR_BbMVE-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  margin: 0 auto; }
+
+.cont-flex {
+  display: flex;
+  justify-content: center; }
+
+.texto-boton {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column; }
+
+.texto-white {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #ffffff; }
+
+.btn-footer {
+  display: flex;
+  justify-content: center; }
+  .btn-footer a {
+    background-color: green;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px;
+    margin-top: 5px;
+    text-decoration: none;
+    width: 180px;
+    height: 40px; }
+
+.contenedor-3 {
+  background-color: #214f21;
+  height: 180px;
+  margin: 0 auto; }
+
+.logo-txt {
+  display: flex;
+  justify-content: center; }
+
+.txt-gray-light {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  color: gray;
+  opacity: 0.6;
+  display: flex;
+  justify-content: center;
+  margin-top: 3.5rem; }
+
+.contenedor-4 {
+  background-color: #227c22;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly; }
+
+.container-3 {
+  height: 20vh; }
+
+.contenedor-bootstrap {
+  display: grid;
+  grid-template-columns: 1fr, 1fr; }
+
+/*Grid*/
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 0;
+  height: 600px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-top: 10px;
+  border-bottom: 1px solid #404040; }
+  .contenedor-grid .grid-1 .imagen-br {
+    height: 200px;
+    width: 200px;
+    background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 5rem; }
+  .contenedor-grid .grid-1 .texto-1 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: #2e2e2e;
+    font-weight: 700; }
+  .contenedor-grid .grid-2 {
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+    .contenedor-grid .grid-2 .texto-2 {
+      text-align: center;
+      color: #2e2e2e;
+      font-weight: 400; }
+      .contenedor-grid .grid-2 .texto-2 p {
+        display: flex;
+        margin: 450px 100px;
+        font-size: 1.4rem; }
+
+/* Productos destacados */
+section .contenedor-txt {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; }
+  section .contenedor-txt .text-green {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #063806; }
+
+section .contenedor-flex {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px; }
+
+.boton-flex {
+  display: flex;
+  justify-content: center; }
+  .boton-flex .btn-per {
+    background-color: green;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px;
+    text-decoration: none;
+    height: 35px;
+    width: 120px;
+    margin: 10px;
+    margin-bottom: 30px; }
+
+.contenedor-bootstrap {
+  display: grid;
+  grid-template-columns: 1fr, 1fr; }
+
+/* Estilos pag Nosotros */
+/* flex */
+.contenedor-flex-2 {
+  display: flex;
+  margin: auto;
+  align-items: center; }
+  .contenedor-flex-2 .contenedor-grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    height: 600px;
+    width: 50%;
+    background-color: rgba(206, 222, 218, 0.462);
+    padding: 20px 20px;
+    margin-left: 30px;
+    border-radius: 6%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px 14px #3f583a; }
+    .contenedor-flex-2 .contenedor-grid-2 .imagen-br-2 {
+      height: 130px;
+      width: 130px;
+      background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+      background-size: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 3rem; }
+    .contenedor-flex-2 .contenedor-grid-2 .texto-1b {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #000000;
+      font-weight: 600; }
+    .contenedor-flex-2 .contenedor-grid-2 .texto-2b {
+      margin-top: 4rem;
+      text-align: center;
+      color: #000000;
+      font-weight: 300;
+      padding: 2rem; }
+      .contenedor-flex-2 .contenedor-grid-2 .texto-2b p {
+        font-size: 1.1rem; }
+
+/* bootstrap */
+.contenedor-bootstrap {
+  gap: 20px;
+  align-content: space-between;
+  margin-left: 80px; }
+
+/* Estilos pag productos */
+.texto-contacto h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: #f5f4f4;
+  height: 100px;
+  padding: 18px; }
+
+.padre-prod {
+  display: flex;
+  justify-content: center;
+  min-width: auto; }
+  .padre-prod .container-productos {
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px; }
+
+/* Estilos pages contacto */
+.texto-contacto {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: #f5f4f4;
+  height: 100px;
+  padding: 18px; }
+
+.container-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  gap: 30px; }
+  .container-form .form-info {
+    margin: auto;
+    width: 600px;
+    padding: 30px;
+    border-radius: 4px;
+    margin-top: 100px; }
+  .container-form .padre-btn-contacto {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; }
+    .container-form .padre-btn-contacto .btn-contacto {
+      background-color: #bdbdbd;
+      color: #ffffff;
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px;
+      text-decoration: none;
+      height: 35px;
+      width: 120px;
+      margin: 10px;
+      margin-bottom: 90px;
+      width: 15rem; }
+  .container-form .contenido {
+    font-weight: 300;
+    color: #509f32;
+    margin: 30px 10px;
+    margin-right: 40px;
+    padding: 0 0 10px;
+    font-size: 2.2em; }
+  .container-form .flex-static {
+    display: flex;
+    font-size: 35px;
+    margin: 0 10px;
+    gap: 20px; }
+
+/* Estilos pag encontranos */
+.tienda {
+  width: 100%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px dashed #000;
+  margin-bottom: 20px; }
+
+.contenedor-txt .text-green {
+  text-align: center;
+  color: #317c31; }
+
+.contenedor-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-self: center; }
+
+.contenedor-bootstrap {
+  display: grid;
+  grid-template-columns: 1fr, 1fr; }
+
+/*Grid*/
+.contenedor-grid {
+  display: grid;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 0;
+  height: 600px;
+  width: 100%;
+  background-color: #f6f6f6;
+  margin-top: 10px;
+  border-bottom: 1px solid #404040; }
+  .contenedor-grid .grid-1 .imagen-br {
+    height: 200px;
+    width: 200px;
+    background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 5rem; }
+  .contenedor-grid .grid-1 .texto-1 {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 2rem;
+    color: #2e2e2e;
+    font-weight: 700; }
+  .contenedor-grid .grid-2 {
+    border-top: none;
+    border-right: none;
+    border-left: none; }
+    .contenedor-grid .grid-2 .texto-2 {
+      text-align: center;
+      color: #2e2e2e;
+      font-weight: 400; }
+      .contenedor-grid .grid-2 .texto-2 p {
+        display: flex;
+        margin: 450px 100px;
+        font-size: 1.4rem; }
+
+/* Productos destacados */
+section .contenedor-txt {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px; }
+  section .contenedor-txt .text-green {
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    color: #063806; }
+
+section .contenedor-flex {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 30px; }
+
+.boton-flex {
+  display: flex;
+  justify-content: center; }
+  .boton-flex .btn-per {
+    background-color: green;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 25px;
+    padding: 8px;
+    text-decoration: none;
+    height: 35px;
+    width: 120px;
+    margin: 10px;
+    margin-bottom: 30px; }
+
+.contenedor-bootstrap {
+  display: grid;
+  grid-template-columns: 1fr, 1fr; }
+
+/* Estilos pag Nosotros */
+/* flex */
+.contenedor-flex-2 {
+  display: flex;
+  margin: auto;
+  align-items: center; }
+  .contenedor-flex-2 .contenedor-grid-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    height: 600px;
+    width: 50%;
+    background-color: rgba(206, 222, 218, 0.462);
+    padding: 20px 20px;
+    margin-left: 30px;
+    border-radius: 6%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px 14px #3f583a; }
+    .contenedor-flex-2 .contenedor-grid-2 .imagen-br-2 {
+      height: 130px;
+      width: 130px;
+      background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+      background-size: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 3rem; }
+    .contenedor-flex-2 .contenedor-grid-2 .texto-1b {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #000000;
+      font-weight: 600; }
+    .contenedor-flex-2 .contenedor-grid-2 .texto-2b {
+      margin-top: 4rem;
+      text-align: center;
+      color: #000000;
+      font-weight: 300;
+      padding: 2rem; }
+      .contenedor-flex-2 .contenedor-grid-2 .texto-2b p {
+        font-size: 1.1rem; }
+
+/* bootstrap */
+.contenedor-bootstrap {
+  gap: 20px;
+  align-content: space-between;
+  margin-left: 80px; }
+
+/* Estilos pag productos */
+.texto-contacto h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: #f5f4f4;
+  height: 100px;
+  padding: 18px; }
+
+.padre-prod {
+  display: flex;
+  justify-content: center;
+  min-width: auto; }
+  .padre-prod .container-productos {
+    margin-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px; }
+
+/* Estilos pages contacto */
+.texto-contacto {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+  background-color: #f5f4f4;
+  height: 100px;
+  padding: 18px; }
+
+.container-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 0 auto;
+  width: 100%;
+  gap: 30px; }
+  .container-form .form-info {
+    margin: auto;
+    width: 600px;
+    padding: 30px;
+    border-radius: 4px;
+    margin-top: 100px; }
+  .container-form .padre-btn-contacto {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; }
+    .container-form .padre-btn-contacto .btn-contacto {
+      background-color: #bdbdbd;
+      color: #ffffff;
+      font-size: 0.8rem;
+      text-align: center;
+      font-weight: 600;
+      border-radius: 25px;
+      padding: 8px;
+      text-decoration: none;
+      height: 35px;
+      width: 120px;
+      margin: 10px;
+      margin-bottom: 90px;
+      width: 15rem; }
+  .container-form .contenido {
+    font-weight: 300;
+    color: #509f32;
+    margin: 30px 10px;
+    margin-right: 40px;
+    padding: 0 0 10px;
+    font-size: 2.2em; }
+  .container-form .flex-static {
+    display: flex;
+    font-size: 35px;
+    margin: 0 10px;
+    gap: 20px; }
+
+/* Estilos pag encontranos */
+.tienda {
+  width: 100%;
+  padding: 10px 40px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px dashed #000;
+  margin-bottom: 20px; }
+
+.contenedor-txt .text-green {
+  text-align: center;
+  color: #317c31; }
+
+.contenedor-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-self: center; }
+
+/* Media celular */
+@media screen and (max-width: 768px) {
+  #mainheader {
+    height: 100px;
+    display: flex;
+    flex-direction: column; }
+    #mainheader .logo {
+      margin: 0 auto;
+      font-size: 1.2rem;
+      text-decoration: none;
+      color: black;
+      padding: 15px 20px; }
+    #mainheader nav {
+      display: flex; }
+      #mainheader nav li {
+        font-size: 0.6rem;
+        text-align: center; }
+      #mainheader nav a {
+        text-decoration: none;
+        color: #28b628; }
+        #mainheader nav a:hover {
+          color: #094f09; }
+  .img-bk {
+    margin-top: 10px;
+    height: 10rem;
+    width: 100%;
+    margin-left: -1px; }
+  .img-bk h1 {
+    font-size: 2rem; }
+  .container-1 {
+    width: 100%; }
+  body {
+    width: 100%; }
+  .contenedor-2 {
+    width: 100%; }
+  .contenedor-grid {
+    margin-top: 25px;
+    width: 100%;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #404040; }
+    .contenedor-grid .grid-1 {
+      margin-top: -40px; }
+      .contenedor-grid .grid-1 .imagen-br {
+        height: 130px;
+        width: 130px;
+        margin-bottom: -30px; }
+      .contenedor-grid .grid-1 .texto-1 {
+        font-size: 1.3rem; }
+    .contenedor-grid .grid-2 {
+      margin-top: -200px; }
+      .contenedor-grid .grid-2 .texto-2 p {
+        font-size: 1.1rem;
+        font-weight: 400; }
+  .text-green {
+    font-size: 1.2rem; }
+  .texto-white {
+    font-size: 1.5rem;
+    text-align: center; }
+  .texto-boton {
+    display: flex;
+    flex-direction: column; }
+  .btn-txt {
+    font-size: 0.8rem; }
+  /* Estilos pag Nosotros */
+  .contenedor-flex-2 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 10px; }
+    .contenedor-flex-2 .contenedor-grid-2 {
+      display: flex;
+      flex-direction: column;
+      height: 600px;
+      width: 100%;
+      background-color: rgba(206, 222, 218, 0.462);
+      margin-left: 0px; }
+    .contenedor-flex-2 .imagen-br-2 {
+      height: 80px;
+      width: 80px;
+      background-image: url(../img/web-developer-vs-software-engineer-man-with-laptop.webp);
+      background-size: cover;
+      border-radius: 50%;
+      margin: 0 auto;
+      margin-top: 3rem; }
+    .contenedor-flex-2 .texto-1b {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 1.5rem;
+      color: #000000;
+      font-weight: 600; }
+    .contenedor-flex-2 .texto-2b p {
+      margin-top: -6rem;
+      text-align: center;
+      font-size: 1.2rem;
+      color: #000000;
+      font-weight: 400;
+      padding: 2rem; }
+  /*Bootstrap*/
+  .contenedor-bootstrap {
+    display: none; }
+  /* page productos */
+  /* bootstrap flex */
+  .title {
+    margin: 10px; }
+    .title h1 {
+      font-size: 1rem;
+      color: #19aa19;
+      border: 1px solid #3b3b3b;
+      margin-bottom: 5px; }
+  .padre-prod .container-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; }
+  /* Page contacto */
+  .texto-contacto {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    background-color: #f5f4f4;
+    height: 80px;
+    padding: 18px; }
+  .container-form {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); }
+    .container-form .form-info {
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 50px; }
+    .container-form .contenido {
+      font-weight: 300;
+      color: #509f32;
+      font-size: 2.2em; }
+    .container-form .section-redes {
+      margin-bottom: 40px; }
+    .container-form .flex-static {
+      display: flex;
+      font-size: 35px;
+      gap: 20px; }
+    .container-form .h2-contact {
+      width: 100%; }
+    .container-form .redes {
+      margin: auto; }
+  .contenedor-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
+
+@media screen and (max-width: 980px) {
+  #mainheader {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    min-width: 60px;
+    margin: 0 auto; }
+    #mainheader .logo {
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: black; }
+  .grid-2 .texto-2 {
+    text-align: center;
+    color: #2e2e2e;
+    font-weight: 400; }
+  .grid-2 p {
+    font-size: 1.2rem; }
+  .contenedor-flex-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .contenedor-grid-2 {
+    margin-top: 30px;
+    background-color: rgba(206, 222, 218, 0.462);
+    padding: 20px 20px;
+    margin: 15px;
+    border-radius: 6%;
+    box-shadow: 0px 0px 20px 14px #3f583a; }
+  .imagen-br-2 {
+    height: 90px;
+    width: 90px; }
+  .texto-1b {
+    text-align: center;
+    margin-top: 0rem;
+    font-size: 1.3rem;
+    color: #000000;
+    font-weight: 600; }
+  .texto-2b {
+    text-align: center;
+    color: #000000;
+    font-weight: 300;
+    padding: 2rem; }
+    .texto-2b p {
+      font-size: 1rem; }
+  /* bootstrap */
+  .contenedor-bootstrap {
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  /* Page Productos*/
+  .padre-prod .container-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; }
+  /* Page contacto */
+  .texto-contacto {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 400;
+    background-color: #f5f4f4;
+    height: 80px;
+    padding: 18px; }
+  .container-form {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr); }
+    .container-form .form-info {
+      width: 100%;
+      margin: auto;
+      margin-top: 50px; }
+    .container-form .contenido {
+      font-weight: 300;
+      color: #509f32;
+      width: 100%;
+      font-size: 2.2em; }
+    .container-form .section-redes {
+      margin-bottom: 40px; }
+    .container-form .flex-static {
+      display: flex;
+      font-size: 35px;
+      margin: 20px 10px;
+      gap: 20px; }
+  .redes {
+    margin: auto; } }
