@@ -2,8 +2,8 @@
 // Array de productos
 const productos = [
     {
-        id:"film-negro",
         titulo:"Film negro",
+        id:"film-negro",
         imagen:"../img/png_20230625_150911_0000.png",
         descripcion:"Bolsas de residuo y consorcio empaquetadas de a 10 unidades",
         categoria: {
@@ -13,8 +13,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-camiseta-verde",
         titulo:"Bolsa camiseta 01",
+        id:"bolsa-camiseta-verde",
         imagen:"../img/png_20230625_151506_0000.png",
         descripcion:"Bolsas para comercio ciudad. Medida:45x55 Bulto por mil unidades",
         categoria: {
@@ -24,8 +24,8 @@ const productos = [
         precio: "$1000"  
     },
     {
-        id:"bolsa-camiseta-negra",
         titulo:"Bolsa camiseta 02",
+        id:"bolsa-camiseta-negra",
         imagen:"../img/png_20230625_151553_0000.png",
         descripcion:"Bolsas para comercio ciudad. Medida:45x55 Bulto por mil unidades",
         categoria: {
@@ -35,8 +35,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-camiseta",
         titulo:"Bolsa camiseta 03",
+        id:"bolsa-camiseta",
         imagen:"../img/png_20230625_151711_0000.png",
         descripcion:"Bolsa camiseta, distintas medidas y colores",
         categoria: {
@@ -46,8 +46,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-plantines",
         titulo:"Bolsa plantines",
+        id:"bolsa-plantines",
         imagen:"../img/20230625_151650_0000.png",
         descripcion:"Bolsa 100 micrones de todas las medidas con material UV super reforzada",
         categoria: {
@@ -57,8 +57,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-riñon",
         titulo:"Bolsa riñon",
+        id:"bolsa-riñon",
         imagen:"../img/20230625_145146_0000.png",
         descripcion:"Bolsa Riñón de distintas medidas y colores",
         categoria: {
@@ -68,8 +68,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-camiseta-personalizada",
         titulo:"Bolsa camiseta personalizada",
+        id:"bolsa-camiseta-personalizada",
         imagen:"../img/20230625_145722_0000.png",
         descripcion:"Bolsa camiseta, distintas medidas y colores",
         categoria: {
@@ -79,8 +79,8 @@ const productos = [
         precio: "$1000"
     },
     {
-        id:"bolsa-riñon-personalizada",
         titulo:"Bolsa riñon personalizada",
+        id:"bolsa-riñon-personalizada",
         imagen:"../img/20230625_150044_0000.png",
         descripcion:"Bolsa Riñón de distintas medidas y colores",
         categoria: {
@@ -92,11 +92,7 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector(".container-productos")
-
-
-
-
-
+const botonAgregar = document.querySelectorAll('#boton-productos')
 
 function cargarProductos () {
     productos.forEach(producto => {
@@ -109,14 +105,25 @@ function cargarProductos () {
         <div class="card-body">
             <h5 class="card-title">${producto.titulo}</h5>
             <p class="card-text">Bolsas de residuo y consorcio empaquetadas de a 10 unidades.</p>
-            <button style="background-color:#28b628; border-radius: 1.3rem; padding: 2px;" class="button-productos">Agregar</button>
+            <button style="background-color:#28b628; border-radius: 1.3rem; padding: 2px;" id="boton-productos">Agregar</button>
             <p class="precio-producto" style="margin-top: 6px;">${producto.precio}</p>
         </div>
         `;
 
         contenedorProductos.append(div);
     })
+    
 }
 
 cargarProductos();
+
+
+
+localStorage.setItem("productos", JSON.stringify(productos));
+
+
+
+
+
+
 
