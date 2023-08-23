@@ -127,17 +127,12 @@ localStorage.setItem("productos", JSON.stringify(productos));
 const botonProductos = document.querySelectorAll(".boton-productos");
 
 
-let productoAgregado = localStorage.getItem("producto-agregado")
 
-function guardarProducto() { 
-    botonProductos.addEventListener("click", () => {
-        guardarProducto()
+botonProductos.forEach( (elemento) => {
+    elemento.addEventListener("click", (e) =>{
+        localStorage.setItem("Producto-agregado", JSON.stringify(productos))
     })
-}
-
-localStorage.setItem("productoAgregado",JSON.stringify(productos));
-
-
+})
 
 
 
