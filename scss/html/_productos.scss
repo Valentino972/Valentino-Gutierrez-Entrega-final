@@ -23,5 +23,16 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
     margin-top: 60px;
+    button.comprar{
+        border: none;
+        outline: 0;
+        padding: 12px;
+        color: #f5f4f4;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
     }
 }
