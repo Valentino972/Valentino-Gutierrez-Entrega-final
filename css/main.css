@@ -523,6 +523,9 @@ section .contenedor-flex {
         width: 100%;
         font-size: 18px;
     }
+    .padre-prod .container-productos .comprar:hover {
+      background-color: #221c1c;
+    }
 
 /* Estilos pages contacto */
 .texto-contacto {
