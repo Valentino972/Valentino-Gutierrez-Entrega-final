@@ -13,34 +13,34 @@ const productos = [
         precio: "$1000"
     },
     {
-        titulo:"Bolsa camiseta 01",
+        titulo:"Bolsa camiseta 1",
         id:"bolsa-camiseta-verde",
         imagen:"../img/png_20230625_151506_0000.png",
         descripcion:"Bolsas para comercio ciudad. Medida:45x55 Bulto por mil unidades",
         categoria: {
-            nombre:"Bolsa camiseta",
+            nombre:"Bolsa camiseta verde",
             id:"bolsa-camiseta-verde",
         },
         precio: "$1000"  
     },
     {
-        titulo:"Bolsa camiseta 02",
+        titulo:"Bolsa camiseta 2",
         id:"bolsa-camiseta-negra",
         imagen:"../img/png_20230625_151553_0000.png",
         descripcion:"Bolsas para comercio ciudad. Medida:45x55 Bulto por mil unidades",
         categoria: {
-            nombre:"Bolsa camiseta",
+            nombre:"Bolsa camiseta negra",
             id:"bolsa-camiseta-negra",
         },
         precio: "$1000"
     },
     {
-        titulo:"Bolsa camiseta 03",
+        titulo:"Bolsa camiseta 3",
         id:"bolsa-camiseta",
         imagen:"../img/png_20230625_151711_0000.png",
         descripcion:"Bolsa camiseta, distintas medidas y colores",
         categoria: {
-            nombre:"Bolsa camiseta",
+            nombre:"Bolsa camiseta ",
             id:"bolsa-camiseta-",
         },
         precio: "$1000"
@@ -92,38 +92,46 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector(".container-productos")
-let carrito = [];
+let carrito = []; 
 
-function cargarProductos () {
-    productos.forEach(producto => {
 
-        const div = document.createElement("div");
-        div.classList.add("producto");
-        div.innerHTML = `
-        <div class="card" style="width: 12rem; background-color: rgb(226, 221, 221);">
-        <img src="${producto.imagen}" alt="${producto.titulo}">
-        <div class="card-body">
-            <h5 class="card-title">${producto.titulo}</h5>
-            <p class="card-text">Bolsas de residuo y consorcio empaquetadas de a 10 unidades.</p>
-            <p class="precio-producto" style="margin-top: 6px;">${producto.precio}</p>
-        </div>
-        `;
+productos.forEach(producto => {
 
-        contenedorProductos.append(div);
+    const div = document.createElement("div");
+    div.classList.add("producto");
+    div.innerHTML = `
+    <div class="card" style="width: 12rem; background-color: rgb(226, 221, 221);">
+    <img src="${producto.imagen}" alt="${producto.titulo}">
+    <div class="card-body">
+        <h5 class="card-title">${producto.titulo}</h5>
+        <p class="card-text">Bolsas de residuo y consorcio empaquetadas de a 10 unidades.</p>
+        <p class="precio-producto" style="margin-top: 6px;">${producto.precio}</p>
+    </div>
+    `;
 
-        let botonComprar = document.createElement("button");
-        botonComprar.innerText ="Comprar";
-        botonComprar.className = "comprar";
+    contenedorProductos.append(div);
 
-        div.append(botonComprar);
-        
-        
+    let botonComprar = document.createElement("button");
+    botonComprar.innerText ="Comprar";
+    botonComprar.className = "comprar";
 
-    });
+    div.append(botonComprar);
     
-}
+    botonComprar.addEventListener("click", () => {
+        carrito.push({
+            nombre: producto.categoria.nombre,
+            id: producto.id,
+            imagen: producto.imagen,
+            precio: producto.precio
+        });
+        console.log(carrito);
+    });
 
-cargarProductos();
+});
+    
+
+
+
 
 
 

@@ -41,6 +41,11 @@ body {
     color: #28b628; }
     #mainheader nav a:hover {
       color: #094f09; }
+      #mainheader nav .ver-carrito{
+        font-size: 25px;
+        margin-top: -8px;
+        cursor: pointer;
+      }
 
 .container-1 {
   margin: 0 auto; }
