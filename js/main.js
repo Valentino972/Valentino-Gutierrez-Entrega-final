@@ -92,7 +92,7 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector(".container-productos")
-const botonAgregar = document.querySelectorAll('#boton-productos')
+
 
 function cargarProductos () {
     productos.forEach(producto => {
@@ -105,7 +105,7 @@ function cargarProductos () {
         <div class="card-body">
             <h5 class="card-title">${producto.titulo}</h5>
             <p class="card-text">Bolsas de residuo y consorcio empaquetadas de a 10 unidades.</p>
-            <button style="background-color:#28b628; border-radius: 1.3rem; padding: 2px;" id="boton-productos">Agregar</button>
+            <button style="background-color:#28b628;  padding: 5px;" class="boton-productos">Agregar</button>
             <p class="precio-producto" style="margin-top: 6px;">${producto.precio}</p>
         </div>
         `;
@@ -119,7 +119,25 @@ cargarProductos();
 
 
 
+////////////////////////////////////////////////////////////////////////
+
+
 localStorage.setItem("productos", JSON.stringify(productos));
+
+const botonProductos = document.querySelectorAll(".boton-productos");
+
+
+let productoAgregado = localStorage.getItem("producto-agregado")
+
+function guardarProducto() { 
+    botonProductos.addEventListener("click", () => {
+        guardarProducto()
+    })
+}
+
+localStorage.setItem("productoAgregado",JSON.stringify(productos));
+
+
 
 
 
