@@ -10,7 +10,7 @@ const productos = [
             nombre:"Film negro",
             id:"film-negro",
         },
-        precio: "$1000"
+        precio: 5000
     },
     {
         titulo:"Bolsa camiseta 1",
@@ -21,7 +21,7 @@ const productos = [
             nombre:"Bolsa camiseta verde",
             id:"bolsa-camiseta-verde",
         },
-        precio: "$1000"  
+        precio: 1000
     },
     {
         titulo:"Bolsa camiseta 2",
@@ -32,7 +32,7 @@ const productos = [
             nombre:"Bolsa camiseta negra",
             id:"bolsa-camiseta-negra",
         },
-        precio: "$1000"
+        precio: 1000
     },
     {
         titulo:"Bolsa camiseta 3",
@@ -43,7 +43,7 @@ const productos = [
             nombre:"Bolsa camiseta ",
             id:"bolsa-camiseta-",
         },
-        precio: "$1000"
+        precio: 1000
     },
     {
         titulo:"Bolsa plantines",
@@ -54,7 +54,7 @@ const productos = [
             nombre:"bolsa plantines",
             id:"bolsa-plantines",
         },
-        precio: "$1000"
+        precio: 800
     },
     {
         titulo:"Bolsa riñon",
@@ -65,7 +65,7 @@ const productos = [
             nombre:"bolsa riñon",
             id:"bolsa-riñon",
         },
-        precio: "$1000"
+        precio: 1500
     },
     {
         titulo:"Bolsa camiseta personalizada",
@@ -76,7 +76,7 @@ const productos = [
             nombre:"Bolsa camiseta personalizada",
             id:"bolsa-camiseta-pesonalizada",
         },
-        precio: "$1000"
+        precio: 1200
     },
     {
         titulo:"Bolsa riñon personalizada",
@@ -87,10 +87,10 @@ const productos = [
             nombre:"Bolsa riñon personalizada",
             id:"bolsa-riñon-personalizada",
         },
-        precio: "$1000"
+        precio: 1800
     }
 ];
-
+let carrito = []; 
 const contenedorProductos = document.querySelector(".container-productos")
 
 
@@ -104,7 +104,7 @@ productos.forEach((producto) => {
     <div class="card-body">
         <h5 class="card-title">${producto.titulo}</h5>
         <p class="card-text">Bolsas de residuo y consorcio empaquetadas de a 10 unidades.</p>
-        <p class="precio-producto" style="margin-top: 6px;">${producto.precio}</p>
+        <p class="precio-producto" style="margin-top: 6px;">$${producto.precio}</p>
     </div>
     `;
 
@@ -142,17 +142,25 @@ verCarrito.addEventListener("click", () => {
 
     modalHeader.append(modalButton);  
 
-    carrito.forEach((producto) => {
+
+    carrito.forEach((productos) => {
         let carritoContent = document.createElement("div")
-        carrito.className = "modal-content"
-        carrito.innerHTML = `
-        img src="${producto.imagen}">
-        <h3>${producto.nombre}</h3>
-        <p>${producto.precio} $</p>
+        carritoContent.className = "modal-content"
+        carritoContent.innerHTML = `
+        <img src="${productos.imagen}">
+        <h3>${productos.nombre}</h3>
+        <p>$${productos.precio}</p>
         `;
 
         modalContainer.append(carritoContent);
     });
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+
+    const totalCompra = document.createElement("div");
+    totalCompra.className= 'total-content';
+    totalCompra.innerHTML = `total a pagar: $${total}`;
+    modalContainer.append(totalCompra);
 });
 
 
