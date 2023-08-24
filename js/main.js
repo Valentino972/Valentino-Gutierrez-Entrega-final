@@ -92,11 +92,10 @@ const productos = [
 ];
 
 const contenedorProductos = document.querySelector(".container-productos")
-let carrito = []; 
 
 
-productos.forEach(producto => {
 
+productos.forEach((producto) => {
     const div = document.createElement("div");
     div.classList.add("producto");
     div.innerHTML = `
@@ -124,12 +123,37 @@ productos.forEach(producto => {
             imagen: producto.imagen,
             precio: producto.precio
         });
-        console.log(carrito);
+        localStorage.setItem("productoAgregado",JSON.stringify(carrito));
     });
-
+    
 });
     
+verCarrito.addEventListener("click", () => {
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modalHeader.innerHTML = `
+    <h1 class="modal-header-title">Carrito</h1>
+    `;
+    modalContainer.append(modalHeader);
 
+    const modalButton = document.createElement("h1");
+    modalButton.innerText = "x";
+    modalButton.className = "modal-header-button";
+
+    modalHeader.append(modalButton);  
+
+    carrito.forEach((producto) => {
+        let carritoContent = document.createElement("div")
+        carrito.className = "modal-content"
+        carrito.innerHTML = `
+        img src="${producto.imagen}">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.precio} $</p>
+        `;
+
+        modalContainer.append(carritoContent);
+    });
+});
 
 
 
