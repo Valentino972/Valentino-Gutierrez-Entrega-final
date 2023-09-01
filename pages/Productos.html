@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="JK|Polietileno, conocé nuestros productos, productos persolizados, comprá en cantidad">
         <meta name="keywords" content="Productos, productos personalizados, film negro, bolsas, polietileno, plantines, bolsa camiseta">
+        <!-- link API -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
         <!--link css-->
         <link rel="stylesheet" href="../css/main.css">
         <!--link bootstrap-->
@@ -38,7 +40,7 @@
                         <a href="../pages/Encontranos.html">Encontranos</a>   
                     </li>
                     <li>
-                        <h1 class="ver-carrito" id="verCarrito">🛒</h1>   
+                        <h1 class="ver-carrito" id="verCarrito">🛒<span id="cantidadCarrito" class="cantidad-carrito"></span></h1>  
                     </li>
                 </ul>
             </nav>
@@ -104,8 +106,10 @@
         </footer>
     </div>
     <!--script-->
-    <script src="../js/carrito.js"></script>
+    <script src="../js/productos.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/carrito.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
