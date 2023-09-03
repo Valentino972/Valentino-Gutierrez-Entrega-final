@@ -36,7 +36,7 @@ productos.forEach((producto) => {
     
     botonComprar.addEventListener("click", () => {
         Toastify({
-            text: "This is a toast",
+            text: "Producto agregado",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
